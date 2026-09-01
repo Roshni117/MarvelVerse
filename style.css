@@ -1,0 +1,1091 @@
+/* ========================================
+   GENERAL / BODY
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #080808;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Make normal text visible */
+
+p {
+    color: #dddddd;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+}
+
+
+/* ========================================
+   NAVIGATION BAR
+   ======================================== */
+
+.navigate {
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+
+    background-color: #111;
+}
+
+
+/* Marvelverse Logo */
+
+.navigate h2 {
+    color: #ed1d24;
+    letter-spacing: 2px;
+}
+
+
+/* Navigation Links */
+
+.navlinks {
+    display: flex;
+    gap: 30px;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+/* Navigation Hover */
+
+.navlinks a:hover {
+    color: #ed1d24;
+}
+
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero-section {
+    height: 580px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image: url("marvel-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    padding: 45px;
+}
+
+
+/* Small Heading */
+
+.small-title {
+    font-size: 22px;
+    letter-spacing: 4px;
+    color: white;
+}
+
+
+/* Main Heading */
+
+.hero-content h1 {
+    font-size: 70px;
+    margin: 10px 0;
+
+    color: white;
+
+    letter-spacing: 5px;
+}
+
+
+/* Description */
+
+.hero-content p {
+    font-size: 25px;
+    color: white;
+}
+
+
+/* Explore Button */
+
+.explore-button {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 15px 30px;
+
+    background-color: #ed1d24;
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 2px solid #ed1d24;
+}
+
+
+/* Button Hover */
+
+.explore-button:hover {
+    background-color: #f5c518;
+
+    border-color: #f5c518;
+
+    color: black;
+}
+
+
+/* ========================================
+   HEROES SECTION
+   ======================================== */
+
+.heroes-section {
+    padding: 60px 40px;
+
+    background-color: #111;
+
+    text-align: center;
+}
+
+
+/* Heading */
+
+.heroes-section h2 {
+    font-size: 35px;
+
+    color: #ffffff;
+
+    margin-bottom: 10px;
+}
+
+
+/* Description */
+
+.section-text {
+    color: #cccccc;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   SCROLLABLE GALLERY
+   ======================================== */
+
+.gallery {
+    display: flex;
+
+    gap: 25px;
+
+    overflow-x: auto;
+
+    padding: 20px;
+}
+
+
+/* Scrollbar */
+
+.gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery::-webkit-scrollbar-track {
+    background: #222;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+    background: #ed1d24;
+}
+
+
+/* ========================================
+   HERO CARDS
+   ======================================== */
+
+.hero-card {
+    min-width: 180px;
+
+    height: 270px;
+
+    flex-shrink: 0;
+
+    border: 4px solid;
+
+    border-image:
+        linear-gradient(
+            45deg,
+            #ed1d24,
+            #f5c518,
+            #ed1d24
+        ) 1;
+
+    background-color: #080808;
+
+    padding: 10px;
+
+    transition: 0.3s;
+}
+
+
+/* Hero Image */
+
+.hero-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+
+/* Hero Name */
+
+.hero-card h3 {
+    font-size: 15px;
+
+    color: white;
+
+    margin-top: 10px;
+}
+
+
+/* Hero Card Hover */
+
+.hero-card:hover {
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   CHOOSE YOUR HERO
+   ======================================== */
+
+.choose-section {
+    padding: 60px 40px;
+
+    background-color: #080808;
+
+    text-align: center;
+}
+
+
+/* Section Heading */
+
+.choose-section h2 {
+    color: #ffffff;
+
+    font-size: 35px;
+}
+
+
+/* ========================================
+   FORM
+   ======================================== */
+
+.hero-form {
+    width: 500px;
+
+    max-width: 90%;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    border: 3px solid;
+
+    border-image:
+        linear-gradient(
+            45deg,
+            #ed1d24,
+            #f5c518,
+            #ed1d24
+        ) 1;
+
+    text-align: left;
+}
+
+
+/* Form Labels */
+
+.hero-form label {
+    display: block;
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    font-size: 16px;
+
+    color: white;
+}
+
+
+/* ========================================
+   TEXT INPUTS
+   ======================================== */
+
+.hero-form input[type="text"] {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #151515;
+
+    border: 2px solid #555;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+
+/* Placeholder */
+
+.hero-form input::placeholder {
+    color: #aaaaaa;
+}
+
+
+/* Input Focus */
+
+.hero-form input[type="text"]:focus {
+    border-color: #ed1d24;
+
+    outline: none;
+}
+
+
+/* ========================================
+   SIDE / RADIO
+   ======================================== */
+
+.side-title {
+    margin-top: 25px;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+
+/* Radio Group */
+
+.radio-group {
+    display: flex;
+
+    gap: 25px;
+}
+
+.radio-group label {
+    margin: 0;
+
+    color: white;
+}
+
+
+/* ========================================
+   CHECKBOX
+   ======================================== */
+
+.checkbox {
+    margin-top: 25px !important;
+
+    color: white;
+}
+
+
+/* ========================================
+   FORM BUTTON
+   ======================================== */
+
+.hero-form button {
+    display: block;
+
+    margin: 30px auto 5px;
+
+    padding: 14px 25px;
+
+    background-color: #ed1d24;
+
+    color: white;
+
+    border: 2px solid #ed1d24;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* Button Hover */
+
+.hero-form button:hover {
+    background-color: #f5c518;
+
+    border-color: #f5c518;
+
+    color: black;
+}
+
+
+/* ========================================
+   RATING SECTION
+   ======================================== */
+
+.rating-section {
+    padding: 60px 40px;
+
+    text-align: center;
+
+    background-color: #111;
+}
+
+
+.rating-section h2 {
+    color: white;
+}
+
+
+/* Rating Box */
+
+.rating-box {
+    width: 400px;
+
+    max-width: 90%;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    border: 3px solid;
+
+    border-image:
+        linear-gradient(
+            45deg,
+            #ed1d24,
+            #f5c518,
+            #ed1d24
+        ) 1;
+}
+
+
+.rating-box h3 {
+    color: white;
+}
+
+
+/* Stars */
+
+.stars {
+    font-size: 40px;
+}
+
+.stars span {
+    color: #555;
+
+    cursor: pointer;
+}
+
+.stars span:hover {
+    color: #f5c518;
+}
+
+
+/* Rating Result */
+
+#rating-result {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   VOTING SECTION
+   ======================================== */
+
+.vote-section {
+    padding: 60px 40px;
+
+    text-align: center;
+
+    background-color: #080808;
+}
+
+
+.vote-section h2 {
+    color: white;
+}
+
+
+/* Vote Container */
+
+.vote-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Vote Card */
+
+.vote-card {
+    width: 180px;
+
+    padding: 15px;
+
+    border: 3px solid;
+
+    border-image:
+        linear-gradient(
+            45deg,
+            #ed1d24,
+            #f5c518
+        ) 1;
+
+    background-color: #111;
+}
+
+
+.vote-card h3 {
+    color: white;
+}
+
+
+.vote-card p {
+    color: #dddddd;
+}
+
+
+/* Vote Image */
+
+.vote-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+
+/* Vote Buttons */
+
+.vote-card button,
+.theme-section button,
+.game-box button,
+.dom-section button {
+
+    padding: 12px 20px;
+
+    background-color: #ed1d24;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* Button Hover */
+
+.vote-card button:hover,
+.theme-section button:hover,
+.game-box button:hover,
+.dom-section button:hover {
+
+    background-color: #f5c518;
+
+    color: black;
+}
+
+
+/* ========================================
+   GAME SECTION
+   ======================================== */
+
+.game-section {
+    padding: 60px 40px;
+
+    text-align: center;
+
+    background-color: #111;
+}
+
+
+.game-section h2 {
+    color: white;
+}
+
+
+.game-box {
+    margin-top: 30px;
+}
+
+
+/* Game Input */
+
+.game-box input,
+.dom-section input {
+
+    padding: 12px;
+
+    background-color: #222;
+
+    color: white;
+
+    border: 2px solid #555;
+}
+
+
+/* Placeholder */
+
+.game-box input::placeholder,
+.dom-section input::placeholder {
+
+    color: #aaaaaa;
+}
+
+
+/* ========================================
+   CLOCK
+   ======================================== */
+
+.clock-section {
+
+    padding: 60px 40px;
+
+    text-align: center;
+
+    background-color: #080808;
+}
+
+
+.clock-section h2 {
+    color: white;
+}
+
+
+/* Clock */
+
+#clock {
+
+    font-size: 50px;
+
+    margin-top: 20px;
+
+    color: #ed1d24;
+
+    letter-spacing: 5px;
+}
+
+
+/* ========================================
+   THEME SECTION
+   ======================================== */
+
+.theme-section {
+
+    padding: 50px;
+
+    text-align: center;
+
+    background-color: #111;
+}
+
+
+.theme-section h2 {
+    color: white;
+}
+
+
+.theme-section p {
+    color: #dddddd;
+}
+
+
+/* ========================================
+   POWER SECTION
+   ======================================== */
+
+.power-section {
+
+    padding: 60px;
+
+    text-align: center;
+
+    background-color: #080808;
+}
+
+
+.power-section h2 {
+    color: white;
+}
+
+
+/* Power Box */
+
+#power-box {
+
+    width: 350px;
+
+    height: 150px;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 3px solid #ed1d24;
+
+    transition: 0.3s;
+}
+
+
+#power-box h3 {
+    color: white;
+}
+
+
+/* Power Hover */
+
+#power-box:hover {
+
+    border-color: #f5c518;
+
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   FACTS SECTION
+   ======================================== */
+
+.facts-section {
+
+    padding: 60px 40px;
+
+    background-color: #111;
+
+    text-align: center;
+}
+
+
+.facts-section h2 {
+    color: white;
+}
+
+
+/* Facts Container */
+
+.facts-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Fact Box */
+
+.fact-box {
+
+    width: 250px;
+
+    padding: 25px;
+
+    text-align: left;
+
+    border: 3px solid #ed1d24;
+
+    background-color: #080808;
+}
+
+
+.fact-box h3 {
+    color: #f5c518;
+}
+
+
+/* List Text */
+
+.fact-box li {
+    color: #dddddd;
+
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   MARVEL UNIVERSE GRID
+   ======================================== */
+
+.universe-section {
+
+    padding: 60px 40px;
+
+    background-color: #080808;
+
+    text-align: center;
+}
+
+
+.universe-section h2 {
+    color: white;
+}
+
+
+/* Grid */
+
+.universe-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+/* Grid Boxes */
+
+.universe-grid div {
+
+    padding: 40px 20px;
+
+    background-color: #151515;
+
+    border: 2px solid #ed1d24;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+
+/* Grid Hover */
+
+.universe-grid div:hover {
+
+    background-color: #ed1d24;
+
+    transform: scale(1.03);
+
+    color: white;
+}
+
+
+/* ========================================
+   DOM SECTION
+   ======================================== */
+
+.dom-section {
+
+    padding: 60px 40px;
+
+    text-align: center;
+
+    background-color: #111;
+}
+
+
+.dom-section h2 {
+    color: white;
+}
+
+
+/* Hero List */
+
+#heroList {
+
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    color: white;
+}
+
+
+#heroList p {
+    color: #f5c518;
+}
+
+
+/* ========================================
+   LIGHT MODE
+   ======================================== */
+
+.light-mode {
+
+    background-color: #eeeeee;
+
+    color: #111;
+}
+
+
+/* Light mode sections */
+
+.light-mode .navigate {
+    background-color: white;
+}
+
+
+.light-mode .heroes-section,
+.light-mode .rating-section,
+.light-mode .game-section,
+.light-mode .theme-section,
+.light-mode .facts-section,
+.light-mode .dom-section {
+    background-color: #eeeeee;
+}
+
+
+/* Light mode headings */
+
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4 {
+    color: #111;
+}
+
+
+/* Light mode paragraphs */
+
+.light-mode p {
+    color: #333;
+}
+
+
+/* Light mode navigation */
+
+.light-mode .navlinks a {
+    color: #111;
+}
+
+
+/* Light mode hero cards */
+
+.light-mode .hero-card {
+    background-color: white;
+}
+
+
+/* Light mode form */
+
+.light-mode .hero-form {
+    background-color: white;
+}
+
+
+/* Light mode labels */
+
+.light-mode .hero-form label,
+.light-mode .side-title,
+.light-mode .checkbox {
+    color: #111;
+}
+
+
+/* Light mode inputs */
+
+.light-mode .hero-form input[type="text"],
+.light-mode .game-box input,
+.light-mode .dom-section input {
+
+    background-color: white;
+
+    color: #111;
+}
+
+
+/* Light mode facts */
+
+.light-mode .fact-box {
+    background-color: white;
+}
+
+
+/* Light mode grid */
+
+.light-mode .universe-grid div {
+    background-color: white;
+
+    color: #111;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    .navigate {
+        padding: 0 20px;
+    }
+
+    .navlinks {
+        gap: 12px;
+    }
+
+    .navlinks a {
+        font-size: 13px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .universe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}

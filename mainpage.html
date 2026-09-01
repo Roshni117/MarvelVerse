@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MarvelVerse ! </title>
+        <link rel="icon" href="shield.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <nav class="navigate">
+            <h2>MARVELVERSE</h2>
+            <div class="navlinks">
+                <a href="#home">Home</a>
+                <a href="#heroes">Heroes</a>
+                <a href="#Team">Team</a>
+                <a href="#Vote">Vote</a>
+            </div>
+        </nav>
+
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <p class="short-title">WELCOME TO THE </p>
+                <H1>MARVELVERSE</H1>
+                <P>Every Hero has a story.
+                   What's yours ?
+                </P>
+
+                <a href="#heroes" class="explore-button">EXPLORE HEROES</a>
+            </div>
+        </section>
+        <section id="heroes" class="heroes-section">
+            <h2>EXPLORE THE HEROES</h2>
+            <p class="section-text">Choose your favourite heroes from the Marvel Universe. </p>
+            <div class="gallery">
+                <div class="hero-card">
+                    <img src="ironman.jpg">
+                    <h3>IRON MAN</h3>
+                </div>
+                <div class="hero-card">
+                    <img src="captain.jpg">
+                    <h3>CAPTAIN AMERICA</h3>
+                </div>
+                <div class="hero-card">
+                    <img src="thor.jpg">
+                    <h3>THOR</h3>
+                </div>
+                <div class="hero-card">
+                    <img src="hulk.jpg">
+                    <h3>HULK</h3>
+                </div>
+                <div class="hero-card">
+                    <img src="spiderman.jpg">
+                    <h3>SPIDER-MAN</h3>
+                </div>
+                <div class="hero-card">
+                    <img src="blackwidow.jpg">
+                    <h3>BLACK WIDOW</h3>
+                </div>
+
+            </div>
+
+        </section> 
+        <!-- Choose Your Hero Section -->
+
+<section id="team" class="choose-section">
+
+    <h2 >CHOOSE YOUR HERO</h2>
+
+    <p class="section-text">
+        Tell us about your Marvel identity
+    </p>
+
+
+    <!-- Hero Form -->
+
+    <form class="hero-form">
+
+        <!-- Name -->
+
+        <label for="name">Your Name</label>
+
+        <input 
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+        >
+
+
+        <!-- Favourite Hero -->
+
+        <label for="hero">Favourite Hero</label>
+
+        <input 
+            type="text"
+            id="hero"
+            placeholder="Enter your favourite hero"
+        >
+
+
+        <!-- Choose Side -->
+
+        <p class="side-title">Choose Your Side</p>
+
+        <div class="radio-group">
+
+            <label>
+                <input type="radio" name="side">
+                Avengers
+            </label>
+
+            <label>
+                <input type="radio" name="side">
+                Guardians
+            </label>
+
+            <label>
+                <input type="radio" name="side">
+                X-Men
+            </label>
+
+        </div>
+
+
+        <!-- Checkbox -->
+
+        <label class="checkbox">
+
+            <input type="checkbox">
+
+            I want to join the Marvelverse
+
+        </label>
+
+
+        <!-- Button -->
+
+        <button type="submit">
+            JOIN THE MARVELVERSE
+        </button>
+
+    </form>
+
+</section> 
+<!-- Section 4 : Hero Rating -->
+
+<section id="rating" class="rating-section">
+
+    <h2>⭐ RATE YOUR HERO</h2>
+
+    <p class="section-text">
+        How powerful is your favourite hero?
+    </p>
+
+    <div class="rating-box">
+
+        <h3>Rate Iron Man</h3>
+
+        <div class="stars">
+
+            <span onclick="rateHero(1)">★</span>
+            <span onclick="rateHero(2)">★</span>
+            <span onclick="rateHero(3)">★</span>
+            <span onclick="rateHero(4)">★</span>
+            <span onclick="rateHero(5)">★</span>
+
+        </div>
+
+        <p id="rating-result">
+            Select your rating
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Section 5 : Voting -->
+
+<section id="vote" class="vote-section">
+
+    <h2>🗳️ HERO OF THE DAY</h2>
+
+    <p class="section-text">
+        Vote for the hero who deserves the throne!
+    </p>
+
+
+    <div class="vote-container">
+
+        <div class="vote-card">
+
+            <img src="ironman.jpg">
+
+            <h3>IRON MAN</h3>
+
+            <p>
+                Votes: <span id="ironVotes">0</span>
+            </p>
+
+            <button onclick="vote('iron')">
+                VOTE
+            </button>
+
+        </div>
+
+
+        <div class="vote-card">
+
+            <img src="thor.jpg">
+
+            <h3>THOR</h3>
+
+            <p>
+                Votes: <span id="thorVotes">0</span>
+            </p>
+
+            <button onclick="vote('thor')">
+                VOTE
+            </button>
+
+        </div>
+
+
+        <div class="vote-card">
+
+            <img src="loki.jpg">
+
+            <h3>LOKI</h3>
+
+            <p>
+                Votes: <span id="lokiVotes">0</span>
+            </p>
+
+            <button onclick="vote('loki')">
+                VOTE
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Section 6 : Number Game -->
+
+<section class="game-section">
+
+    <h2>🧠 CAN YOU DEFEAT THANOS?</h2>
+
+    <p class="section-text">
+        Guess the secret number between 1 and 10!
+    </p>
+
+    <div class="game-box">
+
+        <input 
+            type="number"
+            id="guess"
+            placeholder="Enter a number"
+        >
+
+        <button onclick="checkGuess()">
+            GUESS
+        </button>
+
+        <p id="game-result">
+            Make your move, Avenger!
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Section 7 : Digital Clock -->
+
+<section class="clock-section">
+
+    <h2>🕐 MARVEL TIME</h2>
+
+    <div id="clock">
+        00:00:00
+    </div>
+
+</section>
+
+<!-- Section 8 : Theme -->
+
+<section class="theme-section">
+
+    <h2>⚙️ MARVEL SETTINGS</h2>
+
+    <p>
+        Change the appearance of your Marvelverse.
+    </p>
+
+    <button onclick="changeTheme()">
+        🌗 CHANGE THEME
+    </button>
+
+</section>
+
+<!-- Section 9 : Mouse Event -->
+
+<section class="power-section">
+
+    <h2>⚡ ACTIVATE YOUR POWER</h2>
+
+    <div 
+        id="power-box"
+        onmouseenter="powerOn()"
+        onmouseleave="powerOff()"
+    >
+
+        <h3 id="power-text">
+            Move your mouse here
+        </h3>
+
+    </div>
+
+</section>
+
+<!-- Section 10 : Marvel Facts -->
+
+<section class="facts-section">
+
+    <h2>📚 MARVEL FACTS</h2>
+
+    <div class="facts-container">
+
+        <div class="fact-box">
+
+            <h3>🏆 Top Avengers</h3>
+
+            <ol>
+                <li>Iron Man</li>
+                <li>Captain America</li>
+                <li>Thor</li>
+                <li>Hulk</li>
+                <li>Black Widow</li>
+            </ol>
+
+        </div>
+
+
+        <div class="fact-box">
+
+            <h3>⚡ Super Powers</h3>
+
+            <ul>
+                <li>Super Strength</li>
+                <li>Flight</li>
+                <li>Super Speed</li>
+                <li>Telekinesis</li>
+                <li>Magic</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Section 11 : Grid -->
+
+<section class="universe-section">
+
+    <h2>🌌 MARVEL UNIVERSE</h2>
+
+    <div class="universe-grid">
+
+        <div>🦸 AVENGERS</div>
+
+        <div>🌌 GUARDIANS</div>
+
+        <div>⚔️ X-MEN</div>
+
+        <div>😈 VILLAINS</div>
+
+        <div>⭐ HEROES</div>
+
+        <div>🚀 COSMIC</div>
+
+    </div>
+
+</section>
+
+<!-- Section 12 : DOM -->
+
+<section class="dom-section">
+
+    <h2>🦸 CREATE YOUR HERO</h2>
+
+    <p class="section-text">
+        Enter a hero name and add them to your Marvelverse.
+    </p>
+
+    <input
+        type="text"
+        id="newHero"
+        placeholder="Enter hero name"
+    >
+
+    <button onclick="addHero()">
+        ADD HERO
+    </button>
+
+    <div id="heroList"></div>
+
+</section>
+
+<footer>
+
+        <h3>⚡ MARVELVERSE</h3>
+
+        <p>Built with HTML • CSS • JavaScript • React</p>
+
+        <p>Every hero has a story. What's yours?</p>
+
+    </footer>
+
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
